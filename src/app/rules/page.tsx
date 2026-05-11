@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { ShieldCheck } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Group Rules | MLBMiLB Brotherhood",
@@ -81,9 +80,6 @@ export default function RulesPage() {
 
         {/* Text overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 px-4 text-center">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-diamond-500/20 border border-diamond-500/30 backdrop-blur-sm mb-4">
-            <ShieldCheck size={28} className="text-diamond-400" />
-          </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
             Community <span className="gradient-text">Rules</span>
           </h1>

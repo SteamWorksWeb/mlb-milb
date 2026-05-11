@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import { BookOpen } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Resources | MLBMiLB Brotherhood",
@@ -58,9 +57,6 @@ export default function ResourcesPage() {
 
         {/* Text overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 px-4 text-center">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-field-500/20 border border-field-500/30 backdrop-blur-sm mb-4">
-            <BookOpen size={28} className="text-field-400" />
-          </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
             Player <span className="gradient-text">Resources</span>
           </h1>

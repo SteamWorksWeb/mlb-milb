@@ -2,7 +2,7 @@
 
 import { useState, useCallback } from "react";
 import Image from "next/image";
-import { ClipboardList, Loader2, CheckCircle2, AlertCircle, ChevronDown } from "lucide-react";
+import { Loader2, CheckCircle2, AlertCircle, ChevronDown } from "lucide-react";
 
 // ── Phone formatter ────────────────────────────────────────────────────────────
 function formatPhone(raw: string): string {
@@ -164,10 +164,7 @@ export default function ApplyPage() {
         </div>
 
         {/* Text overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center pt-20 pb-10 px-4 text-center">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold-500/15 border border-gold-500/25 backdrop-blur-sm mb-6">
-            <ClipboardList size={28} className="text-gold-400" />
-          </div>
+        <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 px-4 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
             Become a <span className="gradient-text-gold">Vendor</span>
           </h1>
