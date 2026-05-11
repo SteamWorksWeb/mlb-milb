@@ -1,8 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // ── Types ─────────────────────────────────────────────────────────────────────
 interface ApplyPayload {
   name: string;
@@ -174,6 +172,10 @@ function buildStep(num: string, title: string, body: string): string {
 
 // ── Route Handler ─────────────────────────────────────────────────────────────
 export async function POST(req: NextRequest) {
+  // Instantiated inside the handler so Next.js static analysis never
+  // evaluates this during build — only runs at runtime on actual requests.
+  const resend = new Resend(process.env.RESEND_API_KEY);
+
   try {
     const body: ApplyPayload = await req.json();
 
