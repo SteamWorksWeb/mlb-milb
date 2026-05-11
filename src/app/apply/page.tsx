@@ -448,7 +448,7 @@ export default function ApplyPage() {
           <div className="relative h-44 w-full">
             <Image
               src="/BAT.jpg"
-              alt="Baseball Assistance Team — required $100 annual donation for vendors"
+              alt="Baseball Assistance Team — required $250 one-time donation for approved vendors"
               fill
               className="object-cover object-center"
               sizes="(max-width: 672px) 100vw, 672px"
@@ -457,11 +457,14 @@ export default function ApplyPage() {
           </div>
           <div className="p-6 -mt-8 relative z-10">
             <h2 className="text-base font-bold text-white mb-1.5">
-              Required: $100 BAT Donation
+              Required: $250 One-Time BAT Donation
             </h2>
             <p className="text-sm text-white/55 leading-relaxed mb-4">
-              All vendors must make an annual $100 donation to the Baseball Assistance Team.
-              BAT helps players and baseball family members in financial need.
+              All approved vendors are required to make a one-time $250 donation to the Baseball
+              Assistance Team. BAT helps players and baseball family members in financial need.{" "}
+              <span className="font-bold text-red-400">
+                Do NOT make this donation until your vendor application has been officially approved.
+              </span>
             </p>
             <a
               href="https://www.baseballassistanceteam.com"
@@ -469,7 +472,7 @@ export default function ApplyPage() {
               rel="noopener noreferrer"
               className="btn-ghost text-sm"
             >
-              Donate to BAT →
+              View BAT Website →
             </a>
           </div>
         </div>
