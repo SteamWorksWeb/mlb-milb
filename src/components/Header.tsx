@@ -36,7 +36,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center" aria-label="MLBMiLB Home">
           <Image
-            src="/logo-white.png"
+            src="/logo.png"
             alt="MLBMiLB Brotherhood Logo"
             width={150}
             height={50}
