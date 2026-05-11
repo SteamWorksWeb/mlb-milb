@@ -1,0 +1,87 @@
+{
+  "siteName": "MLBMiLB",
+  "baseUrl": "https://mlbmilb.com",
+  "description": "The Website Home For The Current and Retired MLB & MiLB Players Facebook Page",
+  "navigation": [
+    {
+      "label": "Home",
+      "route": "/",
+      "slug": "home"
+    },
+    {
+      "label": "Vendors",
+      "route": "/vendors/",
+      "slug": "vendors"
+    },
+    {
+      "label": "Vendor Application",
+      "route": "/vendor-application/",
+      "slug": "vendor-application"
+    },
+    {
+      "label": "FB Group Rules",
+      "route": "/fb-group-rules/",
+      "slug": "fb-group-rules"
+    },
+    {
+      "label": "Resources",
+      "route": "/resources/",
+      "slug": "resources"
+    },
+    {
+      "label": "Deals",
+      "route": "/deals/",
+      "slug": "deals"
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "label": "Home",
+      "slug": "home",
+      "title": "Home - MLBMiLB - Facebook Group Website",
+      "description": "The Website Home For The Current and Retired MLB & MiLB Players Facebook Page Read More Vendors Rules Resources",
+      "bodyText": "Skip to content The Website Home For The Current and Retired MLB & MiLB Players Facebook Page Read More Vendors Rules Resources"
+    },
+    {
+      "route": "/vendors/",
+      "label": "Vendors",
+      "slug": "vendors",
+      "title": "Vendors - MLBMiLB - Facebook Group Website",
+      "description": "Web/Marketing/Graphics Sports/Sporting Goods/ Apparel & Uniforms Real Estate/Mortgage Money/Finance/Insurance Health/Wellness Other",
+      "bodyText": "Skip to content Vendors Web/Marketing/Graphics Sports/Sporting Goods/ Apparel & Uniforms Real Estate/Mortgage Money/Finance/Insurance Health/Wellness Other Web/Marketing/Graphics Clay Eavenson – SteamWorks Digital LLC Website design, website hosting, website management, website updates, website support, coding, SEO, Branding and logos, copywriting, and more. 813-300-2147 Seneca, South Carolina Craig Bullock – SocialBull Social Media Management 832-499-2888 Tyler Swinburnson – Digital Products (courses/learning) Digital products (courses/learning) through my website on how to set up an online business using social media for the marketing of “done for you” courses or courses that i may make in the future. The system that I sell is on how to set up your own online business using automations, funnels, business email, all through the business domain. 425-280-1989 Sports/Sporting Goods/Apparel & Uniforms Scott Deremer – Deremer Sportswear We are a family-owned custom screen printing, embroidery and uniform shop in Omaha. NE. We do anything from T-shirts, hoodies, embroidered jackets, custom team uniforms, 3D embroidered hats, bags, etc. Also carry Wilson, Evoshield, Demarini, Louisville Slugger, Rawlings, Easton, etc. 402-598-4367 Patrick Reid – ATX Turf Artificial Turf Bill Geivett – IMA Team Software Matt Martin – Hack Attack Sales Machines and Accessories Rob Tasin – eTeamSponsor Fundraising Platform 281-794-8155 Brandon Guyer – Major League Mindset Public Speaker Pat O'Brien – Off Plane Athletic Solution Sales, Installation and Service of LED Sports Lighting and all other athletic facility needs. Tyler Best – NettingWorld LLC \"Professional Oriented Sports Facility Installation Company. We offer products that will meet all your facility needs and our installation is superb with an emphasis on safety, production, and total usage of area desired.\" 404-915-5305 Jason Stephens – Gorilla Balls Baseball Products 318-655-1551 Andrew McKirahan – WIN RealityBlast, Yakkertech VR Live At-Bats from Home 512-818 -2791 Merrell Ligons – Diamond Sports Training Diamond Sports Training is an online marketplace for online baseball instruction. Coaches, Players, and Parents will have access to online curriculum created by former pro players. 512 367-0899 Kyle Dahlberg – 6-4-3 Baseball, LLC Baseball apparel for lifestyle and performance 210-365-8527 Niels Stone We sell baseball themed golf gear. Anything from Polos to golf bags. I played in the Cubs system for a few years and started shankitgolf.com after i was done with baseball. This last year i started dingersgolfco.com since i was a baseball player and wanted to get back into the game somehow. 239-691-1996 Creighton Gubanich – Pro Baseball Clubhouse Custom patch hats for MLB, MILB and Professional Players of America. 484-947-9476 Chris Luttig/Chreighton Gubanich – Big League Brands Shirts, hats, tumblers, glassware custom cigars for the group 8157216971 Jim Campanis Jr – Authentic Bats Authentic Bats are precision-crafted, custom-made maple and birch bats used by the pros. Authentic Bats was founded by David Chandler. There are various models & sizes available for the group at discounted prices. * Authentic Adult Professional Models (32\" – 35\", in 1/4\" increments, average -3 weight drops) MSRP: $225 -$40 discount – Facebook group pricing: $185 * Authentic Youth Models (27\" – 31.5\", in 1/2\" increments, 2-1/4\" diameter barrel, three model choices, average -5 weight drop) MSRP $165 – $30 discount – Facebook group pricing: $135 * Authentic Advanced Youth Models (31\", 31.5\", & 32\", 2-3/8\" diameter barrel, three model choices, -3 weight drop) MSRP $175 – $30 discount – Facebook group pricing: $145 * CoachAuthentic Fungos (33\" to 36\") MSRP: $145 – $10 discount – Facebook group pricing: $135 * TrainAuthentic Training Tools (Flat Bat, One-Hand, Two-Hand, Hand-Eye Flex) MSRP $165 – $10 discount – Facebook group pricing: $155 Members use code – Campy40 – at checkout to receive the discount. Delivery time v"
+    },
+    {
+      "route": "/vendor-application/",
+      "label": "Vendor Application",
+      "slug": "vendor-application",
+      "title": "Vendor Application - MLBMiLB - Facebook Group Website",
+      "description": "How to apply to be a group vendor:",
+      "bodyText": "Skip to content Vendor Application How to apply to be a group vendor: You must be a member of our private Facebook group and in good standing in order to apply. You must apply to be a vendor. Acceptance is not automatic. Certain types of businesses and products will not be allowed. Fill out the form below to apply. You will be notified by email if you are accepted. At that point, you must donate $250 to BAT (one time donation… not annual). Do NOT donate until your application has been accepted.https://www.mlb.com/baseball-assistance-team Send the donation receipt to info@steamworks.io After that, your business listing will be added to this site. Notes:Vendors are asked to post no more than once a week in the group for commercial purposes.Also, all vendor posts must start with #mlbmilbvendor Vendor Application Personal InfoName(Required) First Last Phone(Required)Email(Required) Business InfoBusiness Name(Required)PhoneEmail Website Describe yoru product or service.(Required)CAPTCHA"
+    },
+    {
+      "route": "/fb-group-rules/",
+      "label": "FB Group Rules",
+      "slug": "fb-group-rules",
+      "title": "FB Group Rules - MLBMiLB - Facebook Group Website",
+      "description": "1. No personal attacksAny personal attacks will be removed. Depending on the severity of the attack, you may be removed from the group.",
+      "bodyText": "Skip to content FB Group Rules 1. No personal attacksAny personal attacks will be removed. Depending on the severity of the attack, you may be removed from the group.2. Respect for other membersIf you say something or act in any way that is disrespectful to other group members, your content will be removed. Depending on the severity of the attack, you may be removed from the group.Bullying of any kind isn’t allowed, and degrading comments about things like race, religion, culture, or sexual orientation will not be tolerated.3. Wives, Girlfriends, KidsThese are off the table. No disparaging remarks or sexual remarks can be directed at any wives, children, or girlfriends of anybody in the group. Any infraction may be subject to an immediate ban.4. Respect everyone’s privacyBeing part of this group requires mutual trust. Authentic, expressive discussions make groups great, but may also be sensitive and private. What’s shared in the group should stay in the group. Screen captures and sharing it with other people may cause you to be removed from the group.5. No PoliticsNo federal-level political posts are allowed.No pointless politically motivated posts or degrading comments about things such as race, religion, culture, sexual orientation, gender or identity will not be tolerated.6. Membership is a Privilege, not a RightJust because you played affiliate pro baseball, does not mean you have a “right” to be in, or stay in, the group. Membership is a privilege.If you don’t follow the rules, you are a source of constant issues in the group, or your presence generates multiple complaints or issues… you may be removed without warning.7. Commercial PostsTo post commercially, you must first email info@steamworks.io with the info about your business. We may ask you questions about your business. Then, if approved by a majority of moderators and the admin, you must make a $100 donation (annually) to BAT and send us the receipt.Then after that, you may make posts selling your goods or services as an “official vendor”.8. Group Management ResponsibilityFacebook terms of service prevail. By your participation in the group, you understand and agree that admins and moderators are not responsible for anything that is said or happens — inside, or outside, of this group.9. Membership requirementsMembers must have played at least one inning or one at-bat in MLB/MiLB affiliated baseball.Non-affiliated players are considered on a case by case basis.All member requests must fill out the member request form satisfactorily.10. How we will handle behavior that breaks rulesIn general, it will be a “three strikes and you’re out” model. Any comment or post breaking the rules is a strike. At our discretion, we may go straight to the punchout for particularly bad behavior."
+    },
+    {
+      "route": "/resources/",
+      "label": "Resources",
+      "slug": "resources",
+      "title": "Resources - MLBMiLB - Facebook Group Website",
+      "description": "",
+      "bodyText": "Skip to content Resources"
+    },
+    {
+      "route": "/deals/",
+      "label": "Deals",
+      "slug": "deals",
+      "title": "Deals - MLBMiLB - Facebook Group Website",
+      "description": "Pro baseball players discounts and deals.",
+      "bodyText": "Skip to content Deals Bajio Sunglasses Email melinda@bajiosunglasses.comTell her you are a member of the MLB + MiLB Current and Retired Pro Baseball players group. Go to the website, find the frame and lense color you want first. Make sure to include that in the email. www.bajiosunglasses.comDiscount is up to $110 off. CORT Furniture Rental Whether you’re mid-season, switching teams, or relocating to a new city, CORT Furniture Rental provides high-quality furnishings for athletes, coaches, and staff, creating a fully furnished experience with privacy, flexibility, and convenience. Focus on your career and family while we handle every detail—from discreet delivery and set up to pickup, whether your next move is across town or across the country.903-721-8371 https://www.cort.com/athlete 20% Discount honored to all members of the group YouthFuel Services Weight Loss Treatments, Testosterone Replacement, Performance Peptide Treatments, Sexual Health Treatments – Designed for YOUTailored Treatment Plans For EverybodyWe offer personalized wellness solutions that work. Our online weight management programs use FDA-approved weight loss medications to help you along the path of your weight loss journey. Looking for ways to boost your energy and build muscle mass safely? We can help you with a personalized testosterone treatment plan. If sexual health and performance are your concern, we offer long-lasting ED treatments that take effect within minutes. Enjoy discreet delivery and expert care—even without insurance. Achieve lasting results, fast with YouthFuel anti-aging solutions! www.youth-fuel.com20% Off First Order"
+    }
+  ]
+}
