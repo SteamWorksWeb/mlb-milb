@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Users2, ExternalLink } from "lucide-react";
+
 
 const footerLinks = [
   {
@@ -44,17 +44,7 @@ export default function Footer() {
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
               The official business directory for the Current &amp; Retired MLB &amp; MiLB Players Facebook Group.
             </p>
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-diamond-400 transition-colors"
-              aria-label="Join the Facebook Group"
-            >
-              <Users2 size={16} />
-              Join the Brotherhood
-              <ExternalLink size={12} />
-            </a>
+
           </div>
 
           {/* Nav groups */}
