@@ -46,17 +46,11 @@ body {
 /* ── Utilities ──────────────────────────────────────────────── */
 
 .gradient-text {
-  background: linear-gradient(135deg, #ffffff 0%, #3d7cfa 50%, #facc15 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 .gradient-text-gold {
-  background: linear-gradient(90deg, #facc15 0%, #f59e0b 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #ffffff;
 }
 
 .glass-card {
