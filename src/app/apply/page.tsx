@@ -150,7 +150,7 @@ export default function ApplyPage() {
     <>
       {/* ── Cinematic page header ───────────────────────────────── */}
       <header className="relative overflow-hidden">
-        <div className="relative h-64 sm:h-72 w-full">
+        <div className="relative h-80 sm:h-96 w-full">
           <Image
             src="/vendors2.jpeg"
             alt="Baseball players representing the MLBMiLB Brotherhood vendor community"
@@ -164,8 +164,8 @@ export default function ApplyPage() {
         </div>
 
         {/* Text overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 px-4 text-center">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold-500/15 border border-gold-500/25 backdrop-blur-sm mb-4">
+        <div className="absolute inset-0 flex flex-col items-center justify-center pt-20 pb-10 px-4 text-center">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold-500/15 border border-gold-500/25 backdrop-blur-sm mb-6">
             <ClipboardList size={28} className="text-gold-400" />
           </div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
