@@ -168,14 +168,53 @@ export default function ApplyPage() {
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
             Become a <span className="gradient-text-gold">Vendor</span>
           </h1>
-          <p className="mt-4 text-white/55 text-lg max-w-xl">
-            To list your business in the official directory, you must first be approved by the
-            group admins and have made a $100 annual donation to BAT.
-          </p>
         </div>
       </header>
 
-      <section className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-6">
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pb-24 space-y-6">
+
+        {/* ── Application info grid ──────────────────────────────── */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 w-full bg-white/5 border border-white/10 rounded-2xl p-6 md:p-10 backdrop-blur-sm text-left">
+
+          {/* Left — Steps (2/3) */}
+          <div className="lg:col-span-2">
+            <h3 className="text-base font-bold text-white">How to apply to be a group vendor:</h3>
+            <ol className="list-decimal list-inside space-y-4 text-gray-300 mt-4 text-sm leading-relaxed">
+              <li>You must be a member of our private Facebook group and in good standing in order to apply.</li>
+              <li>
+                You must apply to be a vendor. Acceptance is not automatic. Certain types of businesses and
+                products will not be allowed. Fill out the form below to apply.
+              </li>
+              <li>
+                You will be notified by email if you are accepted. At that point, you must donate $250 to BAT
+                (one time donation… not annual).{" "}
+                <strong className="text-white">Do NOT donate until your application has been accepted.</strong>
+                <br />
+                <a
+                  href="https://www.mlb.com/baseball-assistance-team"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-diamond-400 hover:underline break-all"
+                >
+                  https://www.mlb.com/baseball-assistance-team
+                </a>
+              </li>
+              <li>Send the donation receipt to{" "}
+                <a href="mailto:info@steamworks.io" className="text-diamond-400 hover:underline">info@steamworks.io</a>
+              </li>
+              <li>After that, your business listing will be added to this site.</li>
+            </ol>
+          </div>
+
+          {/* Right — Notes (1/3) */}
+          <div className="lg:col-span-1 border-t lg:border-t-0 lg:border-l border-white/10 pt-6 lg:pt-0 lg:pl-8 mt-6 lg:mt-0">
+            <h3 className="text-base font-bold text-white">Notes:</h3>
+            <ul className="list-disc list-inside space-y-4 text-gray-300 mt-4 text-sm leading-relaxed">
+              <li>Vendors are asked to post no more than once a week in the group for commercial purposes.</li>
+              <li>Also, all vendor posts must start with <span className="text-white font-semibold">#mlbmilbvendor</span></li>
+            </ul>
+          </div>
+        </div>
 
         {/* ── Application form or success card ─────────────────── */}
         {isSuccess ? (
