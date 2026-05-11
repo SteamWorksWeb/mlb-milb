@@ -8,6 +8,8 @@ const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   display: "swap",
+  preload: true,
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata: Metadata = {
@@ -36,7 +38,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="min-h-screen flex flex-col antialiased bg-diamond-950">
+      <body className={`${inter.className} min-h-screen flex flex-col antialiased bg-diamond-950`}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

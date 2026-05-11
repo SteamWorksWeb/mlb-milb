@@ -45,7 +45,8 @@ export default function Hero({ totalVendors }: HeroProps) {
           fill
           className="object-cover object-center"
           priority
-          quality={85}
+          fetchPriority="high"
+          quality={75}
           sizes="100vw"
         />
         {/* Dark overlay gradient so text stays readable */}
