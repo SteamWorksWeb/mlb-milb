@@ -74,9 +74,6 @@ export default function DealsPage() {
 
         {/* Text overlay */}
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-10 px-4 text-center">
-          <p className="text-xs font-semibold uppercase tracking-widest text-gold-400 mb-3">
-            Exclusive Member Benefits
-          </p>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-white">
             Brotherhood <span className="gradient-text-gold">Deals</span>
           </h1>
