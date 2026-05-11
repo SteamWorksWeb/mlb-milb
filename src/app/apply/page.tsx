@@ -177,9 +177,9 @@ export default function ApplyPage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 w-full bg-white/5 border border-white/10 rounded-2xl p-6 md:p-10 backdrop-blur-sm text-left">
 
           {/* Left — Steps (2/3) */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-2 lg:pr-12">
             <h3 className="text-base font-bold text-white">How to apply to be a group vendor:</h3>
-            <ol className="list-decimal list-inside space-y-4 text-gray-300 mt-4 text-sm leading-relaxed">
+            <ol className="list-decimal list-inside space-y-4 text-gray-300 mt-4 text-sm leading-relaxed text-pretty">
               <li>You must be a member of our private Facebook group and in good standing in order to apply.</li>
               <li>
                 You must apply to be a vendor. Acceptance is not automatic. Certain types of businesses and
