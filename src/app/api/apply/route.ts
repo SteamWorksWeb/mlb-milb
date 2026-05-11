@@ -10,6 +10,7 @@ interface ApplyPayload {
   category: string;
   website?: string;
   description: string;
+  recaptchaToken?: string;
 }
 
 // ── Internal alert email (HTML) ───────────────────────────────────────────────
@@ -178,6 +179,27 @@ export async function POST(req: NextRequest) {
 
   try {
     const body: ApplyPayload = await req.json();
+
+    // ── reCAPTCHA v3 verification ────────────────────────────────
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    if (secretKey) {
+      const token = body.recaptchaToken ?? "";
+      // CRITICAL: Google requires application/x-www-form-urlencoded — NOT JSON
+      const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({ secret: secretKey, response: token }).toString(),
+      });
+      const verifyData = await verifyRes.json() as { success: boolean; score: number; action?: string };
+
+      if (!verifyData.success || verifyData.score < 0.5) {
+        console.warn("[apply/route] reCAPTCHA blocked — score:", verifyData.score);
+        return NextResponse.json(
+          { error: "Request failed security check. Please try again." },
+          { status: 400 }
+        );
+      }
+    }
 
     // Basic server-side validation
     const { name, email, businessName, category, description } = body;

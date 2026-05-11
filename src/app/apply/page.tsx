@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { Loader2, CheckCircle2, AlertCircle, ChevronDown } from "lucide-react";
 
@@ -96,6 +96,24 @@ export default function ApplyPage() {
   const [isSuccess, setIsSuccess]   = useState(false);
   const [errorMsg, setErrorMsg]     = useState<string | null>(null);
 
+  // ── Load reCAPTCHA v3 and hide the floating badge ───────────────────────
+  useEffect(() => {
+    const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY;
+    if (!siteKey) return;
+    if (!document.getElementById("recaptcha-script")) {
+      const s = document.createElement("script");
+      s.id = "recaptcha-script";
+      s.src = `https://www.google.com/recaptcha/api.js?render=${siteKey}`;
+      s.async = true;
+      document.head.appendChild(s);
+    }
+    const style = document.createElement("style");
+    style.id = "recaptcha-badge-hide";
+    style.textContent = ".grecaptcha-badge { visibility: hidden !important; }";
+    document.head.appendChild(style);
+    return () => { document.getElementById("recaptcha-badge-hide")?.remove(); };
+  }, []);
+
   // Generic field handler
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -126,10 +144,23 @@ export default function ApplyPage() {
     setIsSubmitting(true);
 
     try {
+      // Silently execute reCAPTCHA v3 to get a token
+      const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "";
+      let recaptchaToken = "";
+      if (siteKey && typeof window !== "undefined") {
+        type GR = { ready: (cb: () => void) => void; execute: (k: string, o: { action: string }) => Promise<string> };
+        const gr = (window as unknown as { grecaptcha?: GR }).grecaptcha;
+        if (gr) {
+          recaptchaToken = await new Promise<string>((resolve) =>
+            gr.ready(async () => resolve(await gr.execute(siteKey, { action: "apply" })))
+          );
+        }
+      }
+
       const res = await fetch("/api/apply", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, recaptchaToken }),
       });
 
       const data = await res.json();
@@ -399,6 +430,13 @@ export default function ApplyPage() {
                 </button>
                 <p className="text-xs text-white/25 text-center mt-3">
                   By submitting, you confirm you have played at least one inning or at-bat in MLB/MiLB affiliated baseball.
+                </p>
+                <p className="text-xs text-white/20 text-center mt-2 leading-relaxed">
+                  This site is protected by reCAPTCHA and the Google{" "}
+                  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-white/40">Privacy Policy</a>
+                  {" and "}
+                  <a href="https://policies.google.com/terms" target="_blank" rel="noopener noreferrer" className="underline hover:text-white/40">Terms of Service</a>
+                  {" apply."}
                 </p>
               </div>
             </form>
