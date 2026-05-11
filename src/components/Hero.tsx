@@ -89,7 +89,7 @@ export default function Hero({ totalVendors }: HeroProps) {
             className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.08] tracking-tight"
           >
             The{" "}
-            <span className="gradient-text">Brotherhood</span>
+            <span className="text-diamond-400">Brotherhood</span>
             <br />
             Business Network
           </motion.h1>
