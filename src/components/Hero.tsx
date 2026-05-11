@@ -75,19 +75,6 @@ export default function Hero({ totalVendors }: HeroProps) {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
         <motion.div variants={container} initial="hidden" animate="show">
-          {/* Logo mark */}
-          <motion.div variants={item} className="flex justify-center mb-6">
-            <div className="relative w-20 h-20 sm:w-24 sm:h-24">
-              <Image
-                src="/logo.png"
-                alt="MLBMiLB Brotherhood"
-                fill
-                className="object-contain drop-shadow-[0_0_24px_rgba(61,124,250,0.5)]"
-                priority
-              />
-            </div>
-          </motion.div>
-
           {/* Badge */}
           <motion.div variants={item} className="flex justify-center mb-6">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-diamond-500/20 border border-diamond-400/30 text-diamond-200 backdrop-blur-sm">

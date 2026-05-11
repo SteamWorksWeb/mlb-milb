@@ -40,7 +40,7 @@ export default function Header() {
             alt="MLBMiLB Brotherhood Logo"
             width={150}
             height={50}
-            className="object-contain drop-shadow-[0_0_12px_rgba(61,124,250,0.4)] hover:drop-shadow-[0_0_18px_rgba(61,124,250,0.7)] transition-all duration-300"
+            className="h-10 w-auto object-contain drop-shadow-[0_0_12px_rgba(61,124,250,0.4)] hover:drop-shadow-[0_0_18px_rgba(61,124,250,0.7)] transition-all duration-300"
             priority
           />
         </Link>
