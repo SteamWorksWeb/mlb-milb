@@ -13,13 +13,42 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mlbmilb.com"),
   title: {
     default: "MLBMiLB — The Brotherhood Business Directory",
     template: "%s | MLBMiLB Brotherhood",
   },
   description:
     "The official vendor and business directory for current and retired MLB & MiLB players. Explore trusted businesses across sports, finance, health, real estate, and more.",
-  keywords: ["MLB", "MiLB", "baseball", "vendors", "player directory", "pro baseball", "business"],
+  keywords: [
+    "MLB",
+    "MiLB",
+    "baseball",
+    "vendors",
+    "player directory",
+    "pro baseball",
+    "business",
+    "Major League Baseball",
+    "Minor League Baseball",
+    "professional athletes",
+    "athlete network",
+    "sports business",
+    "player-owned businesses"
+  ],
+  authors: [{ name: "MLBMiLB Brotherhood" }],
+  creator: "MLBMiLB Brotherhood",
+  publisher: "MLBMiLB Brotherhood",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -27,7 +56,30 @@ export const metadata: Metadata = {
     siteName: "MLBMiLB Brotherhood",
     title: "MLBMiLB — The Brotherhood Business Directory",
     description:
-      "Trusted businesses from current and retired MLB & MiLB players. Sports, finance, health, real estate, and more.",
+      "The official vendor and business directory for current and retired MLB & MiLB players. Explore trusted businesses across sports, finance, health, real estate, and more.",
+    images: [
+      {
+        url: "/social.png",
+        width: 1200,
+        height: 630,
+        alt: "MLBMiLB Brotherhood — Pro Baseball Players Business & Vendor Directory",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MLBMiLB — The Brotherhood Business Directory",
+    description:
+      "The official vendor and business directory for current and retired MLB & MiLB players. Explore trusted businesses across sports, finance, health, real estate, and more.",
+    images: ["/social.png"],
+  },
+  icons: {
+    icon: "/logo-white.png",
+    shortcut: "/logo-white.png",
+    apple: "/logo-white.png",
+  },
+  alternates: {
+    canonical: "https://mlbmilb.com",
   },
 };
 

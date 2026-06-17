@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Group Rules | MLBMiLB Brotherhood",
+  title: "Group Rules",
   description:
     "Community guidelines for the MLB & MiLB Current and Retired Pro Baseball Players Facebook Group.",
 };

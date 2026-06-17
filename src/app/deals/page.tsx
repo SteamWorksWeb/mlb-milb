@@ -13,7 +13,7 @@ interface Deal {
 }
 
 export const metadata: Metadata = {
-  title: "Exclusive Deals | MLBMiLB Brotherhood",
+  title: "Exclusive Deals",
   description:
     "Pro baseball player discounts and exclusive deals available to MLB & MiLB brotherhood members.",
 };

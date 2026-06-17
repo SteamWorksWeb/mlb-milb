@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";
 import directoryData from "@/data/directory.json";
@@ -6,10 +5,6 @@ import directoryData from "@/data/directory.json";
 // Below-fold components — code-split so they don't block the critical rendering path
 const StatsBar = dynamic(() => import("@/components/StatsBar"), { ssr: true });
 const CategoryShowcase = dynamic(() => import("@/components/CategoryShowcase"), { ssr: true });
-
-export const metadata: Metadata = {
-  title: "Home — MLBMiLB Brotherhood",
-};
 
 export default function HomePage() {
   const { vendors, categories } = directoryData;

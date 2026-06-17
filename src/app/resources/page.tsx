@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Resources | MLBMiLB Brotherhood",
-  description: "Resources for current and retired MLB & MiLB players.",
+  title: "Resources",
+  description: "Helpful links and resources for current and retired MLB & MiLB players.",
 };
 
 const resources = [
