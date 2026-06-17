@@ -74,7 +74,7 @@ function SuccessCard({ name }: { name: string }) {
       <div className="pt-2 space-y-3 text-sm text-white/45 text-left max-w-sm mx-auto">
         {[
           "Admin review (a few business days)",
-          "$100 BAT donation required upon approval",
+          "$250 one-time BAT donation required upon approval",
           "Your business goes live in the directory",
         ].map((step, i) => (
           <div key={step} className="flex items-start gap-3">

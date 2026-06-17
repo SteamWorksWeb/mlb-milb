@@ -154,7 +154,7 @@ export default function DealsPage() {
           <div className="flex-1 p-8 flex flex-col justify-center gap-3">
             <h2 className="text-lg font-bold text-white">Baseball Assistance Team (BAT)</h2>
             <p className="text-sm text-white/55 leading-relaxed">
-              All vendor applicants must make a <strong className="text-white/80">$100 annual donation</strong> to BAT
+              All vendor applicants must make a <strong className="text-white/80">$250 one-time donation</strong> to BAT
               before being listed in the directory. BAT supports players and baseball family members in need.
             </p>
             <a

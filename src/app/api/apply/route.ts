@@ -128,7 +128,7 @@ function buildAutoResponder(data: ApplyPayload): string {
               <p style="margin:0 0 20px;font-size:13px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,0.4);">What happens next</p>
 
               ${buildStep("1", "Admin review", "A majority of moderators will review your business. This usually takes a few business days.")}
-              ${buildStep("2", "$100 BAT Donation", "If approved, you'll be asked to make a $100 annual donation to the Baseball Assistance Team and email the receipt.")}
+              ${buildStep("2", "$250 BAT Donation", "If approved, you'll be asked to make a $250 one-time donation to the Baseball Assistance Team and email the receipt.")}
               ${buildStep("3", "Go live", "Once confirmed, your business is listed in the official Brotherhood directory.")}
 
               <div style="margin-top:32px;padding:20px;background:rgba(26,86,219,0.12);border:1px solid rgba(61,124,250,0.2);border-radius:12px;">

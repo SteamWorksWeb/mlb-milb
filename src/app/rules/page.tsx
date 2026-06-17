@@ -41,7 +41,7 @@ const rules = [
   {
     number: 7,
     title: "Commercial Posts Require Approval",
-    body: "To post commercially, email info@steamworks.io with your business info. If approved, you must make a $100 annual donation to BAT and provide the receipt.",
+    body: "To post commercially, email info@steamworks.io with your business info. If approved, you must make a $250 one-time donation to BAT and provide the receipt.",
   },
   {
     number: 8,
