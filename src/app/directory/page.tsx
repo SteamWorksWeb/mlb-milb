@@ -26,28 +26,29 @@ interface Vendor {
   phone: string | null;
   phoneDial: string | null;
   website: string | null;
+  email?: string | null;
 }
 
 // ── Category color map ────────────────────────────────────────────────────────
 const CATEGORY_STYLE: Record<string, { pill: string; dot: string }> = {
-  "Web & Marketing":       { pill: "bg-blue-500/15 text-blue-300 border-blue-500/25",    dot: "bg-blue-400" },
-  "Sports & Apparel":      { pill: "bg-emerald-500/15 text-emerald-300 border-emerald-500/25", dot: "bg-emerald-400" },
-  "Finance & Insurance":   { pill: "bg-yellow-500/15 text-yellow-300 border-yellow-500/25", dot: "bg-yellow-400" },
-  "Health & Wellness":     { pill: "bg-rose-500/15 text-rose-300 border-rose-500/25",    dot: "bg-rose-400" },
-  "Real Estate & Mortgage":{ pill: "bg-purple-500/15 text-purple-300 border-purple-500/25", dot: "bg-purple-400" },
-  "Technology":            { pill: "bg-cyan-500/15 text-cyan-300 border-cyan-500/25",    dot: "bg-cyan-400" },
-  "Travel & Outdoors":     { pill: "bg-teal-500/15 text-teal-300 border-teal-500/25",    dot: "bg-teal-400" },
+  "Web & Marketing": { pill: "bg-blue-500/15 text-blue-300 border-blue-500/25", dot: "bg-blue-400" },
+  "Sports & Apparel": { pill: "bg-emerald-500/15 text-emerald-300 border-emerald-500/25", dot: "bg-emerald-400" },
+  "Finance & Insurance": { pill: "bg-yellow-500/15 text-yellow-300 border-yellow-500/25", dot: "bg-yellow-400" },
+  "Health & Wellness": { pill: "bg-rose-500/15 text-rose-300 border-rose-500/25", dot: "bg-rose-400" },
+  "Real Estate & Mortgage": { pill: "bg-purple-500/15 text-purple-300 border-purple-500/25", dot: "bg-purple-400" },
+  "Technology": { pill: "bg-cyan-500/15 text-cyan-300 border-cyan-500/25", dot: "bg-cyan-400" },
+  "Travel & Outdoors": { pill: "bg-teal-500/15 text-teal-300 border-teal-500/25", dot: "bg-teal-400" },
   "Speaking & Consulting": { pill: "bg-orange-500/15 text-orange-300 border-orange-500/25", dot: "bg-orange-400" },
-  "Other":                 { pill: "bg-slate-500/15 text-slate-300 border-slate-500/25", dot: "bg-slate-400" },
+  "Other": { pill: "bg-slate-500/15 text-slate-300 border-slate-500/25", dot: "bg-slate-400" },
 };
 
 const DEFAULT_STYLE = { pill: "bg-white/10 text-white/60 border-white/10", dot: "bg-white/40" };
 
 // ── Framer Motion variants ────────────────────────────────────────────────────
 const cardVariants = {
-  hidden:  { opacity: 0, scale: 0.92, y: 16 },
-  visible: { opacity: 1, scale: 1,    y: 0,  transition: { duration: 0.35, ease: "easeOut" as const } },
-  exit:    { opacity: 0, scale: 0.88, y: -8, transition: { duration: 0.22, ease: "easeIn"  as const } },
+  hidden: { opacity: 0, scale: 0.92, y: 16 },
+  visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" as const } },
+  exit: { opacity: 0, scale: 0.88, y: -8, transition: { duration: 0.22, ease: "easeIn" as const } },
 };
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
@@ -102,74 +103,73 @@ function VendorCard({ vendor }: { vendor: Vendor }) {
 
       {/* Card body */}
       <div className="flex flex-col gap-4 p-5 flex-1">
-      {/* Top row */}
-      <div className="flex items-start gap-4">
-        {/* Avatar */}
-        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-diamond-600 to-diamond-800 flex items-center justify-center text-sm font-bold text-white shrink-0 shadow-inner">
-          {initials || "⚾"}
+        {/* Top row */}
+        <div className="flex items-start gap-4">
+          {/* Avatar */}
+          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-diamond-600 to-diamond-800 flex items-center justify-center text-sm font-bold text-white shrink-0 shadow-inner">
+            {initials || "⚾"}
+          </div>
+
+          {/* Name + contact */}
+          <div className="flex-1 min-w-0">
+            <h2 className="text-base font-semibold text-white leading-tight truncate group-hover:text-diamond-300 transition-colors">
+              {vendor.businessName}
+            </h2>
+            <p className="text-xs text-white/50 mt-0.5 truncate">{vendor.contactName}</p>
+          </div>
         </div>
 
-        {/* Name + contact */}
-        <div className="flex-1 min-w-0">
-          <h2 className="text-base font-semibold text-white leading-tight truncate group-hover:text-diamond-300 transition-colors">
-            {vendor.businessName}
-          </h2>
-          <p className="text-xs text-white/50 mt-0.5 truncate">{vendor.contactName}</p>
+        {/* Description */}
+        {vendor.description && (
+          <p className="text-sm text-white/55 leading-relaxed line-clamp-3 flex-1">
+            {vendor.description}
+          </p>
+        )}
+
+        {/* Location */}
+        {vendor.location && (
+          <div className="flex items-center gap-1.5 text-xs text-white/40">
+            <MapPin size={11} />
+            {vendor.location}
+          </div>
+        )}
+
+        {/* Actions */}
+        <div className="flex items-center gap-2 pt-1 mt-auto border-t border-white/[0.06]">
+          {vendor.phoneDial && vendor.phone && (
+            <a
+              href={vendor.phoneDial}
+              id={`vendor-phone-${vendor.id}`}
+              aria-label={`Call ${vendor.businessName}: ${vendor.phone}`}
+              className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium bg-white/5 hover:bg-diamond-500/20 hover:text-diamond-300 text-white/60 transition-all duration-200 border border-white/5 hover:border-diamond-500/30"
+            >
+              <Phone size={12} />
+              {vendor.phone}
+            </a>
+          )}
+
+          {vendor.website && (
+            <a
+              href={vendor.website}
+              id={`vendor-website-${vendor.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit ${vendor.businessName} website`}
+              className={`inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium transition-all duration-200 border ${vendor.phoneDial && vendor.phone
+                  ? "bg-white/5 hover:bg-diamond-500/20 hover:text-diamond-300 text-white/60 border-white/5 hover:border-diamond-500/30"
+                  : "flex-1 bg-diamond-500/15 hover:bg-diamond-500/30 text-diamond-300 border-diamond-500/25"
+                }`}
+            >
+              <Globe size={12} />
+              Website
+              <ExternalLink size={10} />
+            </a>
+          )}
+
+          {!vendor.phone && !vendor.website && (
+            <span className="text-xs text-white/25 italic">Contact via Facebook group</span>
+          )}
         </div>
-      </div>
-
-      {/* Description */}
-      {vendor.description && (
-        <p className="text-sm text-white/55 leading-relaxed line-clamp-3 flex-1">
-          {vendor.description}
-        </p>
-      )}
-
-      {/* Location */}
-      {vendor.location && (
-        <div className="flex items-center gap-1.5 text-xs text-white/40">
-          <MapPin size={11} />
-          {vendor.location}
-        </div>
-      )}
-
-      {/* Actions */}
-      <div className="flex items-center gap-2 pt-1 mt-auto border-t border-white/[0.06]">
-        {vendor.phoneDial && vendor.phone && (
-          <a
-            href={vendor.phoneDial}
-            id={`vendor-phone-${vendor.id}`}
-            aria-label={`Call ${vendor.businessName}: ${vendor.phone}`}
-            className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium bg-white/5 hover:bg-diamond-500/20 hover:text-diamond-300 text-white/60 transition-all duration-200 border border-white/5 hover:border-diamond-500/30"
-          >
-            <Phone size={12} />
-            {vendor.phone}
-          </a>
-        )}
-
-        {vendor.website && (
-          <a
-            href={vendor.website}
-            id={`vendor-website-${vendor.id}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Visit ${vendor.businessName} website`}
-            className={`inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-xs font-medium transition-all duration-200 border ${
-              vendor.phoneDial && vendor.phone
-                ? "bg-white/5 hover:bg-diamond-500/20 hover:text-diamond-300 text-white/60 border-white/5 hover:border-diamond-500/30"
-                : "flex-1 bg-diamond-500/15 hover:bg-diamond-500/30 text-diamond-300 border-diamond-500/25"
-            }`}
-          >
-            <Globe size={12} />
-            Website
-            <ExternalLink size={10} />
-          </a>
-        )}
-
-        {!vendor.phone && !vendor.website && (
-          <span className="text-xs text-white/25 italic">Contact via Facebook group</span>
-        )}
-      </div>
       </div>{/* end card body */}
     </motion.article>
   );
@@ -180,7 +180,7 @@ export default function DirectoryPage() {
   const { vendors, categories } = directoryData as { vendors: Vendor[]; categories: string[] };
 
   const [activeCategory, setActiveCategory] = useState<string>("All");
-  const [searchQuery, setSearchQuery]       = useState<string>("");
+  const [searchQuery, setSearchQuery] = useState<string>("");
   const [showMobileFilter, setShowMobileFilter] = useState(false);
 
   const filtered = useMemo(() => {
@@ -221,24 +221,24 @@ export default function DirectoryPage() {
         </div>
         {/* Text overlaid on the banner */}
         <div className="absolute inset-0 flex flex-col items-center justify-end pb-12 px-4 sm:px-6">
-        <div className="relative max-w-4xl mx-auto text-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.08 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight"
-          >
-            Vendor <span className="gradient-text">Directory</span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.16 }}
-            className="mt-4 text-white/55 text-lg max-w-xl mx-auto"
-          >
-            {vendors.length} businesses owned or recommended by current and retired MLB &amp; MiLB players.
-          </motion.p>
-        </div>
+          <div className="relative max-w-4xl mx-auto text-center">
+            <motion.h1
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.08 }}
+              className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight"
+            >
+              Vendor <span className="gradient-text">Directory</span>
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.16 }}
+              className="mt-4 text-white/55 text-lg max-w-xl mx-auto"
+            >
+              {vendors.length} businesses owned or recommended by current and retired MLB &amp; MiLB players.
+            </motion.p>
+          </div>
         </div>{/* absolute overlay */}
       </header>
 
@@ -278,9 +278,8 @@ export default function DirectoryPage() {
                 key={cat}
                 id={`filter-${cat.toLowerCase().replace(/[^a-z0-9]/g, "-")}`}
                 onClick={() => handleCategory(cat)}
-                className={`category-pill text-xs ${
-                  activeCategory === cat ? "category-pill-active" : "category-pill-inactive"
-                }`}
+                className={`category-pill text-xs ${activeCategory === cat ? "category-pill-active" : "category-pill-inactive"
+                  }`}
               >
                 {cat}
               </button>
@@ -324,9 +323,8 @@ export default function DirectoryPage() {
                   <button
                     key={cat}
                     onClick={() => handleCategory(cat)}
-                    className={`category-pill text-xs ${
-                      activeCategory === cat ? "category-pill-active" : "category-pill-inactive"
-                    }`}
+                    className={`category-pill text-xs ${activeCategory === cat ? "category-pill-active" : "category-pill-inactive"
+                      }`}
                   >
                     {cat}
                   </button>
